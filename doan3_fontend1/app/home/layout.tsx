@@ -55,37 +55,37 @@ export default function HomeLayout({
   return (
     <div>
       <div className="bg-amber-400 ">
-        <div className="w-[1200px] m-auto flex uppercase justify-end">
-          <Link href="/home" className="p-2 pr-5 cursor-pointer">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-wrap justify-center px-2 text-xs uppercase sm:justify-end sm:text-sm">
+          <Link href="/home" className="cursor-pointer p-2 sm:pr-5">
             tin mới & ưu đãi
           </Link>
-          <Link href="/home/vecuatoi" className="p-2 pr-5 cursor-pointer">
+          <Link href="/home/vecuatoi" className="cursor-pointer p-2 sm:pr-5">
             Vé của tôi
           </Link>
-          <Link href="/home/login" className="p-2 cursor-pointer">
+          <Link href="/home/login" className="cursor-pointer p-2">
             đăng nhập
           </Link>
-          <Link href="/home/dangky" className="p-2 cursor-pointer ">
+          <Link href="/home/dangky" className="cursor-pointer p-2">
             /đăng ký
           </Link>
           <button
             onClick={handleLogout}
-            className="p-2 cursor-pointer uppercase"
+            className="cursor-pointer p-2 uppercase"
           >
             đăng xuất
           </button>
         </div>
       </div>
       <div className="bg-amber-100">
-        <div className="w-[1200px] m-auto flex p-2">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-center gap-2 p-2 lg:flex-nowrap lg:justify-between">
           <div>
             <Link href="/home/trangchu">
               <img src="/img/cgvlogo.png" alt="logo" />
             </Link>
           </div>
-          <div className="uppercase text-black p-6 flex z-50">
+          <div className="z-50 flex flex-wrap justify-center p-2 text-xs uppercase text-black sm:p-4 sm:text-sm lg:p-6">
             <div className="relative group">
-              <Link href="/home" className="px-6">
+              <Link href="/home" className="px-2 sm:px-6">
                 Phim
               </Link>
               <div className="absolute hidden group-hover:flex bg-white w-55 h-auto flex-col top-5 rounded-lg">
@@ -104,7 +104,7 @@ export default function HomeLayout({
               </div>
             </div>
             <div className="relative group">
-              <Link href="/home" className="px-6 ">
+              <Link href="/home" className="px-2 sm:px-6">
                 rạp CGV
               </Link>
               <div className="absolute hidden group-hover:flex flex-col w-55 bg-white h-auto rounded-lg  ">
@@ -129,7 +129,7 @@ export default function HomeLayout({
               </div>
             </div>
             <div className="relative group">
-              <Link href="/home" className="px-6">
+              <Link href="/home" className="px-2 sm:px-6">
                 Thành viên
               </Link>
               <div className="absolute hidden group-hover:flex flex-col w-48 h-auto bg-white rounded-lg">
@@ -148,7 +148,7 @@ export default function HomeLayout({
               </div>
             </div>
             <div className="relative group">
-              <Link href="/home" className="px-6">
+              <Link href="/home" className="px-2 sm:px-6">
                 cultureplex
               </Link>
               <div className="absolute hidden group-hover:flex flex-col w-60 h-auto bg-white rounded-lg">
@@ -179,8 +179,8 @@ export default function HomeLayout({
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-center flex-1 text-black ">
-            <div className="relative w-[300px] ">
+          <div className="hidden min-w-0 flex-1 items-center justify-center text-black sm:flex">
+            <div className="relative w-full max-w-[300px]">
               <input
                 value={keyword}
                 onChange={(e) => {
@@ -194,7 +194,7 @@ export default function HomeLayout({
                 }}
                 type="text"
                 placeholder="Tìm kiếm..."
-                className="border border-black rounded-lg pl-2 bg-white outline-none w-[300px] p-1 pr-9 relative text-mg font-['Times_New_Roman']"
+                className="relative w-full rounded-lg border border-black bg-white p-1 pl-2 pr-9 font-['Times_New_Roman'] text-mg outline-none"
               />
               <FaSearch className="absolute right-[10px] top-1.5 text-gray-500 cursor-pointer  " />
               {showResult && movies.length > 0 && (
@@ -223,7 +223,7 @@ export default function HomeLayout({
             <img
               src="/img/mua-ve_ngay.png"
               alt=""
-              className="ml-16 cursor-pointer"
+              className="ml-2 w-28 max-w-full cursor-pointer sm:ml-8 sm:w-36 lg:ml-16 lg:w-auto"
               onClick={handleDatVe}
             />
           </div>
@@ -232,8 +232,8 @@ export default function HomeLayout({
       <div className="  bg-white">{children}</div>
 
       <div className="bg-amber-300 ">
-        <div className="w-[1000px] m-auto h-[700px]">
-          <div className="grid grid-cols-4 text-black ">
+        <div className="mx-auto min-h-[700px] w-full max-w-[1000px] px-4 py-8">
+          <div className="grid grid-cols-2 gap-6 text-sm text-black md:grid-cols-4 md:gap-4">
             <div className="capitalize ">
               <h3>CGV Việt Nam</h3>
               <p>Giới thiệu</p>
@@ -273,7 +273,7 @@ export default function HomeLayout({
           <div className="flex justify-center p-6">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7452.648104605971!2d106.06000171447481!3d20.939497779660833!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1781515380994!5m2!1svi!2s"
-              width="1000"
+              width="100%"
               height="450"
               style={{ border: 0, borderRadius: 10 }}
               allowFullScreen
